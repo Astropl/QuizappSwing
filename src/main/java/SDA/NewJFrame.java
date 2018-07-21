@@ -317,6 +317,14 @@ public class NewJFrame extends javax.swing.JFrame {
 
        //Stwórz test
         JOptionPane.showMessageDialog(null, "Stwórz test");
+        // Label: numer pytania
+        // TextField : pytanie
+        // Text Filed x3 : Bledne odpowiedzi
+        //Text Field : Dobra odpowiedz
+        // Button Dodaj pytanie do testu
+
+
+
     }
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
 

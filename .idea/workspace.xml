@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8a2adc3-722c-4e8d-bc6f-b382b7287e06" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SDA/NewJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SDA/NewJFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SDA/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SDA/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SDA/NewJFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SDA/Test.class" beforeDir="false" />
-    </list>
+    <list default="true" id="b8a2adc3-722c-4e8d-bc6f-b382b7287e06" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,112 +12,95 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.7956469">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SDA/App.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" selection-start-line="12" selection-end-line="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GroupLayout.java" pinned="false" current-in-tab="false">
-            <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/GroupLayout.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="253">
-                  <caret line="1085" selection-start-line="1085" selection-end-line="1085" />
-                  <folding>
-                    <element signature="e#75920#75921#0" expanded="true" />
-                    <element signature="e#75994#75995#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NewJFrame.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SDA/NewJFrame.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="267" column="10" lean-forward="true" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#197#198#0" expanded="true" />
-                    <element signature="e#229#230#0" expanded="true" />
-                    <element signature="e#1320#1490#0" expanded="true" />
-                    <element signature="e#1489#1490#0" expanded="true" />
-                    <element signature="e#1845#2026#0" expanded="true" />
-                    <element signature="e#2025#2026#0" expanded="true" />
-                    <element signature="e#2519#2700#0" expanded="true" />
-                    <element signature="e#2699#2700#0" expanded="true" />
-                    <element signature="e#3497#3669#0" expanded="true" />
-                    <element signature="e#3668#3669#0" expanded="true" />
-                    <element signature="e#3939#4111#0" expanded="true" />
-                    <element signature="e#4110#4111#0" expanded="true" />
-                    <element signature="e#4374#4546#0" expanded="true" />
-                    <element signature="e#4545#4546#0" expanded="true" />
-                    <element signature="e#4810#4982#0" expanded="true" />
-                    <element signature="e#4981#4982#0" expanded="true" />
-                    <element signature="e#5270#5442#0" expanded="true" />
-                    <element signature="e#5441#5442#0" expanded="true" />
-                    <element signature="e#15719#15720#0" expanded="true" />
-                    <element signature="e#15749#15750#0" expanded="true" />
-                    <element signature="e#17171#17258#0" expanded="true" />
-                    <element signature="e#18601#18723#0" expanded="true" />
-                    <element signature="e#18722#18723#0" expanded="true" />
-                    <element signature="e#19575#19576#0" expanded="true" />
-                    <element signature="e#19615#19616#0" expanded="true" />
-                    <element signature="e#19663#19664#0" expanded="true" />
-                    <element signature="e#19694#19695#0" expanded="true" />
-                    <element signature="e#19755#19756#0" expanded="true" />
-                    <element signature="e#19795#19796#0" expanded="true" />
-                    <element signature="e#19843#19844#0" expanded="true" />
-                    <element signature="e#19874#19875#0" expanded="true" />
-                    <element signature="e#19935#19936#0" expanded="true" />
-                    <element signature="e#19975#19976#0" expanded="true" />
-                    <element signature="e#20023#20024#0" expanded="true" />
-                    <element signature="e#20054#20055#0" expanded="true" />
-                    <element signature="e#20115#20116#0" expanded="true" />
-                    <element signature="e#20155#20156#0" expanded="true" />
-                    <element signature="e#20202#20203#0" expanded="true" />
-                    <element signature="e#20233#20234#0" expanded="true" />
-                    <element signature="e#20294#20295#0" expanded="true" />
-                    <element signature="e#20334#20335#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SDA/Test.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
-                  <folding>
-                    <element signature="e#5039#5126#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/SDA/Test.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="164">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SDA/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupLayout.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/GroupLayout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="1085" selection-start-line="1085" selection-end-line="1085" />
+              <folding>
+                <element signature="e#75920#75921#0" expanded="true" />
+                <element signature="e#75994#75995#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewJFrame.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SDA/NewJFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-544">
+              <caret line="267" column="10" lean-forward="true" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#229#230#0" expanded="true" />
+                <element signature="e#1320#1490#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
+                <element signature="e#1845#2026#0" expanded="true" />
+                <element signature="e#2025#2026#0" expanded="true" />
+                <element signature="e#2519#2700#0" expanded="true" />
+                <element signature="e#2699#2700#0" expanded="true" />
+                <element signature="e#3497#3669#0" expanded="true" />
+                <element signature="e#3668#3669#0" expanded="true" />
+                <element signature="e#3939#4111#0" expanded="true" />
+                <element signature="e#4110#4111#0" expanded="true" />
+                <element signature="e#4374#4546#0" expanded="true" />
+                <element signature="e#4545#4546#0" expanded="true" />
+                <element signature="e#4810#4982#0" expanded="true" />
+                <element signature="e#4981#4982#0" expanded="true" />
+                <element signature="e#5270#5442#0" expanded="true" />
+                <element signature="e#5441#5442#0" expanded="true" />
+                <element signature="e#15719#15720#0" expanded="true" />
+                <element signature="e#15749#15750#0" expanded="true" />
+                <element signature="e#17171#17258#0" expanded="true" />
+                <element signature="e#18601#18723#0" expanded="true" />
+                <element signature="e#18722#18723#0" expanded="true" />
+                <element signature="e#19575#19576#0" expanded="true" />
+                <element signature="e#19615#19616#0" expanded="true" />
+                <element signature="e#19663#19664#0" expanded="true" />
+                <element signature="e#19694#19695#0" expanded="true" />
+                <element signature="e#19755#19756#0" expanded="true" />
+                <element signature="e#19795#19796#0" expanded="true" />
+                <element signature="e#19843#19844#0" expanded="true" />
+                <element signature="e#19874#19875#0" expanded="true" />
+                <element signature="e#19935#19936#0" expanded="true" />
+                <element signature="e#19975#19976#0" expanded="true" />
+                <element signature="e#20023#20024#0" expanded="true" />
+                <element signature="e#20054#20055#0" expanded="true" />
+                <element signature="e#20115#20116#0" expanded="true" />
+                <element signature="e#20155#20156#0" expanded="true" />
+                <element signature="e#20202#20203#0" expanded="true" />
+                <element signature="e#20233#20234#0" expanded="true" />
+                <element signature="e#20294#20295#0" expanded="true" />
+                <element signature="e#20334#20335#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SDA/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#5039#5126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -413,7 +390,7 @@
       <workItem from="1531761804965" duration="14634000" />
       <workItem from="1531848443937" duration="7900000" />
       <workItem from="1531860273238" duration="3394000" />
-      <workItem from="1532164886345" duration="3837000" />
+      <workItem from="1532164886345" duration="4411000" />
     </task>
     <servers />
   </component>
@@ -423,7 +400,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29765000" />
+    <option name="totallyTimeSpent" value="30339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1702" y="83" width="1696" height="1026" extended-state="0" />
@@ -439,8 +416,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.051605504" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32912844" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30045873" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32912844" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.062958434" />
@@ -799,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SDA/NewJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="-544">
           <caret line="267" column="10" lean-forward="true" selection-start-line="267" selection-start-column="10" selection-end-line="267" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />

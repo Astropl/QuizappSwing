@@ -3,6 +3,9 @@ package SDA;
 import javax.swing.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -34,6 +37,12 @@ public class NewJFrame extends javax.swing.JFrame {
         setjButton6(new javax.swing.JButton());
         setjButton7(new javax.swing.JButton());
         Font font = new Font("Calibri", 1, 18);
+        jPanel3 = new javax.swing.JPanel();
+        LblDate = new javax.swing.JLabel();
+        LblTime = new javax.swing.JLabel();
+
+
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quizapp");
@@ -131,6 +140,23 @@ public class NewJFrame extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }});
 
+        jPanel3.setBackground(new java.awt.Color(153, 255, 204));
+
+        LblDate.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        LblDate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblDate.setText("ZEGAR");
+        LblDate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LblDate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LblDate.setName("LblDate");
+
+        LblTime.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        LblTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LblTime.setText("ZEGAR");
+        LblTime.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        LblTime.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LblTime.setName("LblTime");
+
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -208,24 +234,53 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(LblDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LblTime, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(LblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(LblTime, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 494, Short.MAX_VALUE))
+        );
+
+
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(230, 230, 230)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(286, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 739, Short.MAX_VALUE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                        .addGap(245, 245, 245)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(245, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(157, 157, 157)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(193, Short.MAX_VALUE))
-                        .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                        .addGap(175, 175, 175)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addContainerGap(175, Short.MAX_VALUE)))
         );
+
+        //**************************
+
+        //*************************
+
 
         setSize(new java.awt.Dimension(1280, 720)); //Ustawienie głownej Formy
         setLocationRelativeTo(null);
@@ -244,7 +299,14 @@ public class NewJFrame extends javax.swing.JFrame {
         //jPanel1.setHorizontalAlignment(jLabel1.CENTER);
         //jPanel1.setHorizontalAlignment(jPanel1.CENTER);
         //this.set
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
+        DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
+        Date date = new Date();
+        LblDate.setText(dateFormat.format(date));
+        LblTime.setText(timeFormat.format(date));
+
     }
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -364,6 +426,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTxtFieldLogin;
     private javax.swing.JPasswordField jTxtPass;
+    private javax.swing.JLabel LblDate;
+    private javax.swing.JLabel LblTime;
+    private javax.swing.JPanel jPanel3;
 
     //End Variables declaration
     public javax.swing.JButton getjButton3() {

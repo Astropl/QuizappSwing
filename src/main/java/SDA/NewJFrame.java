@@ -2,6 +2,8 @@ package SDA;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,7 +19,9 @@ public class NewJFrame extends javax.swing.JFrame {
         initComponents();
     }
 
-
+    /**
+     *
+     */
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -41,7 +45,12 @@ public class NewJFrame extends javax.swing.JFrame {
         LblDate = new javax.swing.JLabel();
         LblTime = new javax.swing.JLabel();
         jLblMakeTest = new javax.swing.JLabel("Arkusz podawania pytań do testu");
-
+        jTxtPyt1 = new javax.swing.JTextField();
+        jTxtPyt2 = new javax.swing.JTextField();
+        jTxtPyt3 = new javax.swing.JTextField();
+        jTxtPyt4 = new javax.swing.JTextField();
+        jTxtPyt5 = new javax.swing.JTextField();
+        jBtnAkcpetPytania = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quizapp");
@@ -75,6 +84,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jTxtPass.setToolTipText("Password");
         jTxtPass.setAutoscrolls(false);
         jTxtPass.setName("jTxtPass");
+
+        jTxtPyt1.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt1.setToolTipText("Podaj pytanie");
+
+
+        jTxtPyt2.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt2.setToolTipText("Podaj odpowiedz 1");
+        jTxtPyt3.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt3.setToolTipText("Podaj odpowiedz 2");
+        jTxtPyt4.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt4.setToolTipText("Podaj odpowiedz 3");
+        jTxtPyt5.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt5.setToolTipText("Podaj odpowiedz 4");
+
 
         jButton2.setText("Cancel");
         jButton2.setPreferredSize(new java.awt.Dimension(75, 25));
@@ -163,7 +186,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLblMakeTest.setFont(new java.awt.Font("Calibri", 1, 18));
         LblTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-
+        //jPanel4.setBackground(Color.WHITE);
+        jPanel4.setVisible(false);
+        jBtnAkcpetPytania.setText("Dodaj pytanie do bazy");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -259,55 +284,82 @@ public class NewJFrame extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
-                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLblMakeTest, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+                jPanel4Layout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(jLblMakeTest, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt1, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt2, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt3, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt4, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt5, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jBtnAkcpetPytania, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+
+        );
 
         jPanel4Layout.setVerticalGroup(
-                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel4Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel4Layout.createSequentialGroup()
 //                                .addComponent(LblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
 //                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                //.addComponent(jLblMakeTest, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLblMakeTest, javax.swing.GroupLayout.PREFERRED_SIZE, 43, 100)
-                                .addGap(200, 294, Short.MAX_VALUE))
-        );
+                                        //.addComponent(jLblMakeTest, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLblMakeTest, GroupLayout.DEFAULT_SIZE, 10, 10)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt1, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt2, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt3, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(80, 80, Short.MAX_VALUE)
+                                        .addComponent(jTxtPyt4, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(100, 100, Short.MAX_VALUE)
+                                        .addComponent(jTxtPyt5, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jBtnAkcpetPytania, GroupLayout.DEFAULT_SIZE, 10, 30)
+                        ));
 
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.CENTER)
                         .addGroup(layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 739, Short.MAX_VALUE)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                        .addGap(245, 245, 245)
+                                        .addGap(145, 245, 245)
                                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addContainerGap(245, Short.MAX_VALUE)))
                         .addGroup(layout.createSequentialGroup()
-                                .addGap(245, 245, 645)
+                                .addGap(45, 145, 245)
                                 .addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
 
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(45, 145, 245)
                         .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-
+                        .addGap(45, 145, 245)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                        .addGap(175, 175, 175)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(10, 15, 15)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 //                                        .addContainerGap(175, Short.MAX_VALUE)
-                                       .addContainerGap(175, Short.MAX_VALUE)
+                                                .addContainerGap(10, Short.MAX_VALUE)
 
-        )));
+                                )));
 
 
-                        //.addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING));
+        //.addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING));
 //                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 //                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
 //                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
@@ -319,13 +371,16 @@ public class NewJFrame extends javax.swing.JFrame {
         //**************************
 
         //*************************
-        jLblMakeTest.setBounds(100,100,50,50);
+        //jLblMakeTest.setBounds(100,100,50,50);
 
 
         setSize(new java.awt.Dimension(1280, 720)); //Ustawienie głownej Formy
         setLocationRelativeTo(null);
     }
 
+    /**
+     * @param evt
+     */
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {
         //NewJFrame.setLayout(null);
@@ -338,15 +393,38 @@ public class NewJFrame extends javax.swing.JFrame {
         //jPanel1.setHorizontalAlignment(jLabel1.CENTER);
         //jPanel1.setHorizontalAlignment(jPanel1.CENTER);
         //this.set
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
-        DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
-        Date date = new Date();
-        LblDate.setText(dateFormat.format(date));
-        LblTime.setText(timeFormat.format(date));
-        jLblMakeTest.setBounds(100, 100, 100, 100);
+
+        checkDate();
+
 
     }
 
+    public void checkDate() {
+
+
+        final DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+        final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
+
+
+        ActionListener timerListener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Date date = new Date();
+
+                LblDate.setText(dateFormat.format(date));
+                LblTime.setText(timeFormat.format(date));
+            }
+        };
+        Timer timer = new Timer(1000, timerListener);
+
+        timer.setInitialDelay(0);
+        timer.start();
+
+
+    }
+
+    /**
+     * @param evt
+     */
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -357,6 +435,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         //Stwórz test
         JOptionPane.showMessageDialog(null, "Stwórz test");
+        jPanel4.setVisible(true);
         // Label: numer pytania
         // TextField : pytanie
         // Text Filed x3 : Bledne odpowiedzi
@@ -388,6 +467,9 @@ public class NewJFrame extends javax.swing.JFrame {
         this.dispose();
     }
 
+    /**
+     * @param evt
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String tempLogNauczyciel = "nauczyciel";
         String tempPassNauczyciel = "123";
@@ -413,7 +495,12 @@ public class NewJFrame extends javax.swing.JFrame {
         getjButton5().setEnabled(true);
         getjButton6().setEnabled(true);
         jPanel1.setVisible(false);
+
     }
+
+    /**
+     *
+     */
 
     public void setButtonsUczen() {
 //        getjButton3().setEnabled(true);
@@ -421,8 +508,12 @@ public class NewJFrame extends javax.swing.JFrame {
         getjButton5().setEnabled(true);
         getjButton6().setEnabled(true);
         jPanel1.setVisible(false);
+        //jPanel4.setVisible(true);
     }
 
+    /**
+     * @param args
+     */
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -476,8 +567,15 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel LblTime;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-
     private javax.swing.JLabel jLblMakeTest;
+
+    private javax.swing.JTextField jTxtPyt1;
+    private javax.swing.JTextField jTxtPyt2;
+    private javax.swing.JTextField jTxtPyt3;
+    private javax.swing.JTextField jTxtPyt4;
+    private javax.swing.JTextField jTxtPyt5;
+    private javax.swing.JButton jBtnAkcpetPytania;
+
 
     //End Variables declaration
     public javax.swing.JButton getjButton3() {

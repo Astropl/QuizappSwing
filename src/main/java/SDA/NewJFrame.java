@@ -1,8 +1,9 @@
 package SDA;
 
 import javax.swing.*;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,7 +19,9 @@ public class NewJFrame extends javax.swing.JFrame {
         initComponents();
     }
 
-
+    /**
+     *
+     */
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -38,11 +41,16 @@ public class NewJFrame extends javax.swing.JFrame {
         setjButton7(new javax.swing.JButton());
         Font font = new Font("Calibri", 1, 18);
         jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         LblDate = new javax.swing.JLabel();
         LblTime = new javax.swing.JLabel();
-
-
-
+        jLblMakeTest = new javax.swing.JLabel("Arkusz podawania pytań do testu");
+        jTxtPyt1 = new javax.swing.JTextField();
+        jTxtPyt2 = new javax.swing.JTextField();
+        jTxtPyt3 = new javax.swing.JTextField();
+        jTxtPyt4 = new javax.swing.JTextField();
+        jTxtPyt5 = new javax.swing.JTextField();
+        jBtnAkcpetPytania = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quizapp");
@@ -77,6 +85,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jTxtPass.setAutoscrolls(false);
         jTxtPass.setName("jTxtPass");
 
+        jTxtPyt1.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt1.setToolTipText("Podaj pytanie");
+
+
+        jTxtPyt2.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt2.setToolTipText("Podaj odpowiedz 1");
+        jTxtPyt3.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt3.setToolTipText("Podaj odpowiedz 2");
+        jTxtPyt4.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt4.setToolTipText("Podaj odpowiedz 3");
+        jTxtPyt5.setFont(new java.awt.Font("Calibri", 1, 18));
+        jTxtPyt5.setToolTipText("Podaj odpowiedz 4");
+
+
         jButton2.setText("Cancel");
         jButton2.setPreferredSize(new java.awt.Dimension(75, 25));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +124,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
-            }});
+            }
+        });
 
         getjButton4().setFont(new java.awt.Font("Calibri", 1, 18));
         getjButton4().setForeground(new java.awt.Color(0, 204, 0));
@@ -111,7 +134,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
-            }});
+            }
+        });
 
         getjButton5().setFont(new java.awt.Font("Calibri", 1, 18));
         getjButton5().setForeground(new java.awt.Color(0, 204, 0));
@@ -120,7 +144,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
-            }});
+            }
+        });
 
         getjButton6().setFont(new java.awt.Font("Calibri", 1, 18));
         getjButton6().setForeground(new java.awt.Color(0, 204, 0));
@@ -129,7 +154,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
-            }});
+            }
+        });
 
         getjButton7().setFont(new java.awt.Font("Calibri", 1, 18));
         getjButton7().setText("Koniec");
@@ -138,7 +164,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
-            }});
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(153, 255, 204));
 
@@ -156,6 +183,12 @@ public class NewJFrame extends javax.swing.JFrame {
         LblTime.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LblTime.setName("LblTime");
 
+        jLblMakeTest.setFont(new java.awt.Font("Calibri", 1, 18));
+        LblTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        //jPanel4.setBackground(Color.WHITE);
+        jPanel4.setVisible(false);
+        jBtnAkcpetPytania.setText("Dodaj pytanie do bazy");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -199,8 +232,6 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
 
-
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -212,10 +243,10 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                         .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                                 //.addContainerGap())
 
-        ));
+                        ));
         jPanel2Layout.setVerticalGroup(
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
@@ -250,43 +281,106 @@ public class NewJFrame extends javax.swing.JFrame {
                                 .addGap(0, 494, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+                jPanel4Layout.createParallelGroup(GroupLayout.Alignment.CENTER)
+                        .addComponent(jLblMakeTest, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt1, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt2, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt3, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt4, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jTxtPyt5, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+                        .addComponent(jBtnAkcpetPytania, GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 50, Short.MAX_VALUE)
+
+        );
+
+        jPanel4Layout.setVerticalGroup(
+                jPanel4Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+//                                .addComponent(LblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        //.addComponent(jLblMakeTest, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLblMakeTest, GroupLayout.DEFAULT_SIZE, 10, 10)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt1, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt2, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(10, 10, Short.SIZE)
+                                        .addComponent(jTxtPyt3, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(80, 80, Short.MAX_VALUE)
+                                        .addComponent(jTxtPyt4, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        //.addGap(100, 100, Short.MAX_VALUE)
+                                        .addComponent(jTxtPyt5, GroupLayout.DEFAULT_SIZE, 10, 30)
+                                        .addGap(10, 10, Short.SIZE)
+                                        .addComponent(jBtnAkcpetPytania, GroupLayout.DEFAULT_SIZE, 10, 30)
+                        ));
 
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.CENTER)
                         .addGroup(layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 739, Short.MAX_VALUE)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                        .addGap(245, 245, 245)
+                                        .addGap(145, 245, 245)
                                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addContainerGap(245, Short.MAX_VALUE)))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 145, 245)
+                                .addComponent(jPanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(45, 145, 245)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(45, 145, 245)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
-                                        .addGap(175, 175, 175)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(175, Short.MAX_VALUE)))
-        );
+                                                .addGap(10, 15, 15)
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+//                                        .addContainerGap(175, Short.MAX_VALUE)
+                                                .addContainerGap(10, Short.MAX_VALUE)
+
+                                )));
+
+
+        //.addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING));
+//                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+//                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+//                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+//                        .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+//                        .addGroup(jPanel4Layout.createSequentialGroup()
+//                                        .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+
 
         //**************************
 
         //*************************
+        //jLblMakeTest.setBounds(100,100,50,50);
 
 
         setSize(new java.awt.Dimension(1280, 720)); //Ustawienie głownej Formy
         setLocationRelativeTo(null);
     }
 
-
+    /**
+     * @param evt
+     */
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {
         //NewJFrame.setLayout(null);
@@ -299,14 +393,38 @@ public class NewJFrame extends javax.swing.JFrame {
         //jPanel1.setHorizontalAlignment(jLabel1.CENTER);
         //jPanel1.setHorizontalAlignment(jPanel1.CENTER);
         //this.set
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
-        DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
-        Date date = new Date();
-        LblDate.setText(dateFormat.format(date));
-        LblTime.setText(timeFormat.format(date));
+
+        checkDate();
+
 
     }
 
+    public void checkDate() {
+
+
+        final DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+        final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");//SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
+
+
+        ActionListener timerListener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Date date = new Date();
+
+                LblDate.setText(dateFormat.format(date));
+                LblTime.setText(timeFormat.format(date));
+            }
+        };
+        Timer timer = new Timer(1000, timerListener);
+
+        timer.setInitialDelay(0);
+        timer.start();
+
+
+    }
+
+    /**
+     * @param evt
+     */
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 
@@ -315,8 +433,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
 
-       //Stwórz test
+        //Stwórz test
         JOptionPane.showMessageDialog(null, "Stwórz test");
+        jPanel4.setVisible(true);
         // Label: numer pytania
         // TextField : pytanie
         // Text Filed x3 : Bledne odpowiedzi
@@ -324,8 +443,8 @@ public class NewJFrame extends javax.swing.JFrame {
         // Button Dodaj pytanie do testu
 
 
-
     }
+
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
 
         //Wyslij Test Uczniom
@@ -348,10 +467,13 @@ public class NewJFrame extends javax.swing.JFrame {
         this.dispose();
     }
 
+    /**
+     * @param evt
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String tempLogNauczyciel = "nauczyciel";
         String tempPassNauczyciel = "123";
-        String tempLogUczen ="uczen";
+        String tempLogUczen = "uczen";
         String tempPassUczen = "123";
         if (jTxtFieldLogin.getText().equals(tempLogNauczyciel) && (jTxtPass.getText().equals(tempPassNauczyciel))) {
             System.out.println("Wejscie jako nauczyciel");
@@ -359,32 +481,39 @@ public class NewJFrame extends javax.swing.JFrame {
 
             setButtonsNauczyciel();
 
-        } else if (jTxtFieldLogin.getText().equals(tempLogUczen) && (jTxtPass.getText().equals(tempPassUczen))){
+        } else if (jTxtFieldLogin.getText().equals(tempLogUczen) && (jTxtPass.getText().equals(tempPassUczen))) {
             System.out.println("wejscie jako Uczen");
             JOptionPane.showMessageDialog(null, "Zalogowany jako Uczen");
-            setButtonsUczen ();
+            setButtonsUczen();
         }
     }
 
 
-    public void setButtonsNauczyciel ()
-    {
+    public void setButtonsNauczyciel() {
         getjButton3().setEnabled(true);
         getjButton4().setEnabled(true);
         getjButton5().setEnabled(true);
         getjButton6().setEnabled(true);
         jPanel1.setVisible(false);
+
     }
 
-    public void setButtonsUczen ()
-    {
+    /**
+     *
+     */
+
+    public void setButtonsUczen() {
 //        getjButton3().setEnabled(true);
 //        getjButton4().setEnabled(true);
         getjButton5().setEnabled(true);
         getjButton6().setEnabled(true);
         jPanel1.setVisible(false);
+        //jPanel4.setVisible(true);
     }
 
+    /**
+     * @param args
+     */
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -437,6 +566,16 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel LblDate;
     private javax.swing.JLabel LblTime;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel jLblMakeTest;
+
+    private javax.swing.JTextField jTxtPyt1;
+    private javax.swing.JTextField jTxtPyt2;
+    private javax.swing.JTextField jTxtPyt3;
+    private javax.swing.JTextField jTxtPyt4;
+    private javax.swing.JTextField jTxtPyt5;
+    private javax.swing.JButton jBtnAkcpetPytania;
+
 
     //End Variables declaration
     public javax.swing.JButton getjButton3() {
@@ -471,6 +610,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public void setjButton6(javax.swing.JButton jButton6) {
         this.jButton6 = jButton6;
     }
+
     public javax.swing.JButton getjButton7() {
         return jButton7;
     }

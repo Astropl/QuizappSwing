@@ -161,7 +161,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-13" />
     <option name="y" value="14" />
     <option name="width" value="1386" />
@@ -238,7 +238,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Quizapp-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="copyright.profiles" />
@@ -404,7 +404,7 @@
       <workItem from="1531848443937" duration="7900000" />
       <workItem from="1531860273238" duration="3394000" />
       <workItem from="1532164886345" duration="4411000" />
-      <workItem from="1532243556270" duration="12417000" />
+      <workItem from="1532243556270" duration="12839000" />
     </task>
     <servers />
   </component>
@@ -414,7 +414,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50463000" />
+    <option name="totallyTimeSpent" value="50885000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
